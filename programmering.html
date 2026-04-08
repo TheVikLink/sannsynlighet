@@ -1,0 +1,139 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programmering med mynter og terninger</title>
+        <link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet" href="css/editor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/dracula.min.css">
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/edit/closebrackets.min.js"></script>
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="index.html" data-nav>Læringsstier</a>
+<a href="formler.html" data-nav>Formler</a>
+<a href="test.html" data-nav>Test</a>
+<a href="programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container" id="programmering-page">
+    <section class="topic-hero">
+        <div class="topic-tag">🐍 Python-verksted</div>
+        <h1 class="page-title">Programmering med mynter og terninger</h1>
+        <p>
+            Her kan elevene endre noen få variabler og se hva som skjer i simuleringen. 
+            Eksemplene er kommentert grundig på norsk, og editoren lagrer koden lokalt i nettleseren.
+        </p>
+        <div class="programming-tips">
+            <span class="notes-chip">lettvektsutgave</span>
+            <span class="notes-chip">ingen pygame</span>
+            <span class="notes-chip">Skulpt + CodeMirror bare på denne siden</span>
+            <span class="notes-chip">Ctrl + Enter for å kjøre</span>
+        </div>
+    </section>
+
+    <section class="programming-layout">
+        <aside class="section">
+            <h2>Velg eksempel</h2>
+            <div class="example-list">
+                <button type="button" data-example="mynt"><strong>🪙 Myntkast mange ganger</strong><div class="small">Start enkelt og sammenlign simulering med teori.</div></button>
+                <button type="button" data-example="juksemynt"><strong>⚖️ Rettferdig mynt vs. skjev mynt</strong><div class="small">Sammenlign to mynter side om side.</div></button>
+                <button type="button" data-example="terning"><strong>🎲 Én terning og ett tall</strong><div class="small">Undersøk hvor ofte et bestemt tall dukker opp.</div></button>
+                <button type="button" data-example="toTerninger"><strong>🎲🎲 To terninger og en sum</strong><div class="small">Se hvorfor enkelte summer dukker opp oftere.</div></button>
+            </div>
+
+            <div class="callout" style="margin-top: 18px;">
+                <h3 id="example-title">Myntkast mange ganger</h3>
+                <p class="muted" id="example-short"></p>
+
+                <h4>Variabler elevene lett kan endre</h4>
+                <ul class="quick-vars" id="editable-vars"></ul>
+
+                <h4 style="margin-top: 18px;">Forslag til små oppdrag</h4>
+                <ol class="challenge-list" id="challenge-list"></ol>
+            </div>
+        </aside>
+
+        <section class="section editor-shell">
+            <div class="editor-header">
+                <div class="title-group">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <div>
+                        <strong>program.py</strong>
+                        <div class="small">Kommentert Python som elevene kan skru på selv.</div>
+                    </div>
+                </div>
+                <div class="editor-actions">
+                    <button class="btn btn-success" type="button" id="run-code">▶ Kjør kode</button>
+                    <button class="btn btn-light" type="button" id="clear-output">🧹 Tøm output</button>
+                    <button class="btn btn-light" type="button" id="reset-code">↺ Tilbakestill eksempel</button>
+                    <button class="btn btn-light" type="button" id="download-code">💾 Last ned</button>
+                </div>
+            </div>
+
+            <div class="editor-subbar">
+                <span class="notes-chip">Ctrl + Enter kjører koden</span>
+                <span class="notes-chip">Ctrl + S laster ned</span>
+                <span class="notes-chip">Lokallagring i nettleseren</span>
+                <button class="btn btn-light" type="button" id="toggle-turtle">🐢 Vis turtle</button>
+            </div>
+
+            <div class="editor-main">
+                <div class="editor-pane">
+                    <textarea id="code"></textarea>
+                </div>
+                <div class="output-pane">
+                    <div class="output-toolbar">
+                        <strong>📤 Output</strong>
+                        <span class="small">Hold simuleringene moderate for raske Chromebooker.</span>
+                    </div>
+                    <div id="turtle-container" class="section" style="display: none; margin: 14px;">
+                        <h3 style="margin-top: 0;">Turtle-område</h3>
+                        <div id="turtle-canvas" style="width: 360px; height: 360px; margin: 0 auto;"></div>
+                    </div>
+                    <div class="output-content" id="output"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section">
+        <div class="split">
+            <div class="example">
+                <strong>Pedagogisk grep</strong>
+                <p class="muted">I alle eksemplene ligger det eleven bør endre øverst. Da slipper de å rote nede i løkkene før de er klare for det.</p>
+            </div>
+            <div class="example">
+                <strong>Ytelse</strong>
+                <p class="muted">Editoren lastes bare på denne siden. Resten av nettstedet bruker ren HTML, CSS og vanlig JavaScript uten tunge biblioteker.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/programming-examples.js"></script>
+<script src="js/programming-editor.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sannsynlighet med to trekk</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="../index.html" data-nav>Læringsstier</a>
+<a href="../formler.html" data-nav>Formler</a>
+<a href="../test.html" data-nav>Test</a>
+<a href="../programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container">
+    <section class="topic-hero">
+        <div class="topic-tag">🌿 Tre-diagrammer og stier</div>
+        <h1 class="page-title">Sannsynlighet med to trekk</h1>
+        <p>To trekk gjør landskapet mer levende. Nå må du holde orden på om trekkene er med eller uten tilbakelegging, og du må vite når du skal multiplisere langs en gren og når du skal legge sammen flere gunstige stier.</p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="../test.html">Test dette temaet</a>
+            <a class="btn btn-light" href="../index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hva du skal lære</h2>
+        <div class="info-grid">
+            <div class="info-box"><h4>Med og uten tilbakelegging</h4><p class="muted">Du skal kunne se hvordan første trekk påvirker det andre.</p></div><div class="info-box"><h4>Tre-diagram</h4><p class="muted">Du skal kunne følge en gren og multiplisere sannsynligheter langs veien.</p></div><div class="info-box"><h4>Flere veier</h4><p class="muted">Du skal kunne legge sammen gunstige stier som beskriver samme hendelse.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hvorfor virker det?</h2>
+
+    <div class="split">
+        <div class="example">
+            <strong>Én gren i treet</strong>
+            <div class="formula-badge">P(A og B) = P(A) · P(B etter A)</div>
+            <p class="muted">Langs én gren multipliserer vi.</p>
+        </div>
+        <div class="example">
+            <strong>Flere gunstige stier</strong>
+            <p class="muted">Når hendelsen kan skje på flere måter, legger vi sammen sannsynlighetene for de gunstige greinene.</p>
+            <div class="visual-row">
+                <span class="chip">RB</span>
+                <span class="chip">BR</span>
+                <span class="arrow">→</span>
+                <span class="chip">én rød og én blå</span>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="section">
+        <h2>Regnet eksempel steg for steg</h2>
+        <div class="step-list">
+            <div class="step"><strong>Oppgave</strong><div class="muted">En pose har 2 røde og 3 blå kuler. Du trekker to ganger uten tilbakelegging. Hva er sannsynligheten for først rød og så blå?</div></div><div class="step"><strong>Første trekk</strong><div class="muted">Sannsynligheten for rød først er 2/5.</div></div><div class="step"><strong>Andre trekk</strong><div class="muted">Etter en rød kule er tatt bort, er det 3 blå av 4 kuler igjen. Sannsynligheten er 3/4.</div></div><div class="step"><strong>Multipliser</strong><div class="muted">P(R så B) = 2/5 · 3/4 = 6/20 = 3/10.</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Øv selv</h2>
+        <div class="practice-list">
+
+        <div class="practice-item">
+            <strong>1. Samme pose, men med tilbakelegging. Hva blir P(R så B)?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">2/5 · 3/5 = 6/25 fordi antallet kuler er det samme i begge trekk.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>2. I en pose ligger 2 røde og 2 blå kuler. Hva er sannsynligheten for én rød og én blå uten tilbakelegging?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">RB eller BR: 2/4 · 2/3 + 2/4 · 2/3 = 2/3.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>3. Når blir trekkene avhengige?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Når første trekk endrer situasjonen for andre trekk, slik det gjør uten tilbakelegging.</div>
+            </details>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="warning"><strong>Vanlig feil:</strong> Elever legger ofte sammen når de egentlig skal multiplisere, eller de glemmer én av de gunstige stiene.</div>
+        <div class="success"><strong>Husk:</strong> Følg én grein om gangen. Multipliser langs greinen, legg sammen mellom flere gunstige greiner.</div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+<script src="../js/calculator.js"></script>
+    </body>
+    </html>

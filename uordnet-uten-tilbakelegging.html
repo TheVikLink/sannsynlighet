@@ -1,0 +1,116 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uordnet utvalg uten tilbakelegging</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="../index.html" data-nav>Læringsstier</a>
+<a href="../formler.html" data-nav>Formler</a>
+<a href="../test.html" data-nav>Test</a>
+<a href="../programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container">
+    <section class="topic-hero">
+        <div class="topic-tag">👥 Grupper, ikke rekker</div>
+        <h1 class="page-title">Uordnet utvalg uten tilbakelegging</h1>
+        <p>Her er det gruppen som teller, ikke rekkefølgen. Hvis du først regner som om rekkefølgen betyr noe, må du rydde bort overtellingen etterpå. Det er her delingen på r! gjør hele opprydningsjobben.</p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="../test.html">Test dette temaet</a>
+            <a class="btn btn-light" href="../index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hva du skal lære</h2>
+        <div class="info-grid">
+            <div class="info-box"><h4>Typiske situasjoner</h4><p class="muted">Komitéer, lag, grupper og utvalg.</p></div><div class="info-box"><h4>Formel</h4><p class="muted">Du skal kunne bruke n!/(r!(n-r)!).</p></div><div class="info-box"><h4>Forklaring</h4><p class="muted">Du skal forstå hvorfor vi deler på r! når rekkefølgen ikke teller.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hvorfor virker det?</h2>
+
+    <div class="split">
+        <div class="example">
+            <div class="formula-badge">n! / (r!(n-r)!)</div>
+            <p class="muted">Først teller vi ordnede valg, men så deler vi på alle rekkefølgene av samme gruppe.</p>
+            <div class="visual-row">
+                <span class="chip">AB</span>
+                <span class="chip">BA</span>
+                <span class="arrow">→</span>
+                <span class="chip">én gruppe</span>
+            </div>
+        </div>
+        <div class="example">
+            <strong>Hvorfor dele på 3! i en tremannsgruppe?</strong>
+            <p class="muted">Fordi de samme tre personene kan ordnes på 3! = 6 måter, men alle disse beskriver samme gruppe.</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="section">
+        <h2>Regnet eksempel steg for steg</h2>
+        <div class="step-list">
+            <div class="step"><strong>Oppgave</strong><div class="muted">Hvor mange grupper på 3 elever kan velges fra en klasse på 8 elever?</div></div><div class="step"><strong>Tenk først ordnet</strong><div class="muted">Hvis rekkefølgen hadde telt, ville vi hatt 8 · 7 · 6 ordnede valg.</div></div><div class="step"><strong>Rydd bort overtelling</strong><div class="muted">Hver tremannsgruppe er telt 3! = 6 ganger.</div></div><div class="step"><strong>Del</strong><div class="muted">Derfor blir svaret (8 · 7 · 6) / 6 = 56. Det samme er 8!/(3!5!).</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Øv selv</h2>
+        <div class="practice-list">
+
+        <div class="practice-item">
+            <strong>1. Hvor mange tomannsgrupper kan lages av 6 elever?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">C(6,2) = 6!/(2!4!) = 15.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>2. Hvorfor er AB og BA samme svar i en gruppeoppgave?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Fordi gruppen inneholder de samme personene. Rekkefølgen er likegyldig.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>3. Du velger 4 toppings fra 7 mulige. Hvilken tankegang passer?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Uordnet uten tilbakelegging. Rekkefølgen betyr ikke noe, og samme topping velges ikke to ganger.</div>
+            </details>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="warning"><strong>Vanlig feil:</strong> Mange bruker formelen for ordnet utvalg og får et svar som er for stort fordi samme gruppe er telt flere ganger.</div>
+        <div class="success"><strong>Husk:</strong> Når du bare spør «hvem er med?», er det uordnet.</div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+<script src="../js/calculator.js"></script>
+    </body>
+    </html>

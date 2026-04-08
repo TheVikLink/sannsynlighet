@@ -1,0 +1,115 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordnet utvalg uten tilbakelegging</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="../index.html" data-nav>Læringsstier</a>
+<a href="../formler.html" data-nav>Formler</a>
+<a href="../test.html" data-nav>Test</a>
+<a href="../programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container">
+    <section class="topic-hero">
+        <div class="topic-tag">🏁 Rekkefølge med krympende valg</div>
+        <h1 class="page-title">Ordnet utvalg uten tilbakelegging</h1>
+        <p>Her teller rekkefølgen, men når du har brukt et objekt, er det borte. Antall valg krymper dermed for hver plass. Dette er medaljepallen, seteradene og bokstavrekkenes terreng.</p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="../test.html">Test dette temaet</a>
+            <a class="btn btn-light" href="../index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hva du skal lære</h2>
+        <div class="info-grid">
+            <div class="info-box"><h4>Typiske situasjoner</h4><p class="muted">Premiepall, rekkefølger, plasseringer og roller.</p></div><div class="info-box"><h4>Formel</h4><p class="muted">Du skal kunne bruke n! og n!/(n-r)! i passende oppgaver.</p></div><div class="info-box"><h4>Idé</h4><p class="muted">Du skal se at antall valg blir ett mindre for hver nye plass.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hvorfor virker det?</h2>
+
+    <div class="split">
+        <div class="example">
+            <div class="formula-badge">n! / (n-r)!</div>
+            <p class="muted">Vi starter med n valg. Så blir det n-1, n-2, og så videre til vi har fylt r plasser.</p>
+            <div class="visual-row">
+                <span class="slot">8</span>
+                <span class="slot">7</span>
+                <span class="slot">6</span>
+            </div>
+        </div>
+        <div class="example">
+            <strong>Fakultet som forkortelse</strong>
+            <p class="muted">5! betyr 5 · 4 · 3 · 2 · 1. Det er bare en raskere måte å skrive en fallende produktrekke på.</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="section">
+        <h2>Regnet eksempel steg for steg</h2>
+        <div class="step-list">
+            <div class="step"><strong>Oppgave</strong><div class="muted">Hvor mange måter kan gull, sølv og bronse deles ut blant 8 løpere?</div></div><div class="step"><strong>Fyll første plass</strong><div class="muted">Det er 8 muligheter for gull.</div></div><div class="step"><strong>Fyll andre og tredje plass</strong><div class="muted">Etter gull er én løper brukt. Da er det 7 muligheter for sølv og 6 for bronse.</div></div><div class="step"><strong>Multipliser</strong><div class="muted">8 · 7 · 6 = 336. Det samme er 8! / 5!.</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Øv selv</h2>
+        <div class="practice-list">
+
+        <div class="practice-item">
+            <strong>1. Hvor mange ulike rekkefølger kan lages av 5 forskjellige bokstaver når alle skal brukes?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">5! = 120.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>2. Du skal sette 3 av 7 bøker på rad i en hylle. Hvor mange oppstillinger finnes?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">7 · 6 · 5 = 210.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>3. Hvorfor passer ikke n^r her?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Fordi antall valg ikke er likt i hver plass. Hver gang et objekt brukes, forsvinner det.</div>
+            </details>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="warning"><strong>Vanlig feil:</strong> Elever blander ofte denne typen med ordnet med tilbakelegging og lar antall valg stå stille i stedet for å krympe.</div>
+        <div class="success"><strong>Husk:</strong> Når rekkefølgen teller og noe forsvinner, tenk fallende produkt.</div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+<script src="../js/calculator.js"></script>
+    </body>
+    </html>

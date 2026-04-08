@@ -1,0 +1,229 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formler og forklaringer</title>
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="index.html" data-nav>Læringsstier</a>
+<a href="formler.html" data-nav>Formler</a>
+<a href="test.html" data-nav>Test</a>
+<a href="programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container" id="formulas-page">
+    <section class="topic-hero">
+        <div class="topic-tag">📐 Formler med forklaring</div>
+        <h1 class="page-title">Formelverksted</h1>
+        <p>
+            Her ligger ikke formlene som stive museumsgjenstander bak glass. Her får de jobbe.
+            Hver formel har en kort forklaring, en idé om <em>hvorfor</em> den virker, og en liten hjelper
+            der eleven kan sette inn egne tall.
+        </p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="test.html">Gå til test</a>
+            <a class="btn btn-light" href="index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section wizard-card">
+        <h2>Formelveiviser</h2>
+        <p class="muted">Start med de to viktigste spørsmålene: teller rekkefølgen, og kan noe velges flere ganger?</p>
+        <div class="field-grid">
+            <div>
+                <label for="wizard-order">Er rekkefølgen viktig?</label>
+                <select id="wizard-order">
+                    <option value="yes">Ja</option>
+                    <option value="no">Nei</option>
+                </select>
+            </div>
+            <div>
+                <label for="wizard-replacement">Kan samme ting velges flere ganger?</label>
+                <select id="wizard-replacement">
+                    <option value="yes">Ja</option>
+                    <option value="no">Nei</option>
+                </select>
+            </div>
+        </div>
+        <div class="wizard-output" id="wizard-output"></div>
+    </section>
+
+    <section class="section">
+        <h2>De viktigste formlene</h2>
+        <div class="formula-grid">
+            <article class="helper-card">
+                <div class="formula-title">
+                    <h3>Sannsynlighet</h3>
+                    <span class="topic-pill">Grunnformel</span>
+                </div>
+                <div class="formula-badge">P = gunstige / mulige</div>
+                <p>Brukes når du teller hvor mange utfall som passer, sammenlignet med alle mulige utfall.</p>
+                <div class="visual-row">
+                    <span class="ball red"></span>
+                    <span class="ball blue"></span>
+                    <span class="ball blue"></span>
+                    <span class="arrow">→</span>
+                    <span class="math">2 av 3 blå</span>
+                </div>
+                <div class="helper-output math">Eksempel: 2/3 = 0,666...</div>
+            </article>
+
+            <article class="helper-card">
+                <div class="formula-title">
+                    <h3>Ordnet med tilbakelegging</h3>
+                    <span class="topic-pill">Koder • mønstre</span>
+                </div>
+                <div class="formula-badge">n<sup>r</sup></div>
+                <p>Samme antall valg i hver plass. Rekkefølgen teller, og ingenting forsvinner underveis.</p>
+                <div class="visual-row">
+                    <span class="slot">A/B/C</span>
+                    <span class="slot">A/B/C</span>
+                    <span class="slot">A/B/C</span>
+                </div>
+                <div class="helper-output math">Eksempel: 3<sup>3</sup> = 27</div>
+            </article>
+
+            <article class="helper-card">
+                <div class="formula-title">
+                    <h3>Ordnet uten tilbakelegging</h3>
+                    <span class="topic-pill">Premiepall • rekkefølge</span>
+                </div>
+                <div class="formula-badge">n! / (n-r)!</div>
+                <p>Rekkefølgen teller, men antall valg blir mindre for hver plass.</p>
+                <div class="visual-row">
+                    <span class="slot">8 valg</span>
+                    <span class="slot">7 valg</span>
+                    <span class="slot">6 valg</span>
+                </div>
+                <div class="helper-output math">Eksempel: 8 · 7 · 6 = 336</div>
+            </article>
+
+            <article class="helper-card">
+                <div class="formula-title">
+                    <h3>Uordnet uten tilbakelegging</h3>
+                    <span class="topic-pill">Grupper • lag</span>
+                </div>
+                <div class="formula-badge">n! / (r!(n-r)!)</div>
+                <p>Du teller grupper. Derfor må du dele på r! for å rydde bort alle rekkefølgene av samme gruppe.</p>
+                <div class="visual-row">
+                    <span class="chip">AB</span>
+                    <span class="chip">BA</span>
+                    <span class="arrow">→</span>
+                    <span class="chip">samme gruppe</span>
+                </div>
+                <div class="helper-output math">Eksempel: C(6, 2) = 15</div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Små formelhjelpere</h2>
+        <div class="helper-grid">
+            <article class="helper-card">
+                <h3>Sannsynlighet for ett trekk</h3>
+                <div class="field-grid">
+                    <div>
+                        <label for="prob-favorable">Gunstige utfall</label>
+                        <input id="prob-favorable" type="number" min="0" value="3">
+                    </div>
+                    <div>
+                        <label for="prob-total">Mulige utfall</label>
+                        <input id="prob-total" type="number" min="1" value="8">
+                    </div>
+                </div>
+                <div class="button-row" style="margin-top: 12px;">
+                    <button class="btn btn-dark" id="prob-calc" type="button">Regn ut</button>
+                </div>
+                <div class="helper-output" id="prob-output"></div>
+            </article>
+
+            <article class="helper-card">
+                <h3>Ordnet med tilbakelegging</h3>
+                <div class="field-grid">
+                    <div>
+                        <label for="or-n">n</label>
+                        <input id="or-n" type="number" min="1" value="4">
+                    </div>
+                    <div>
+                        <label for="or-r">r</label>
+                        <input id="or-r" type="number" min="0" value="3">
+                    </div>
+                </div>
+                <div class="button-row" style="margin-top: 12px;">
+                    <button class="btn btn-dark" id="or-calc" type="button">Regn ut</button>
+                </div>
+                <div class="helper-output" id="or-output"></div>
+            </article>
+
+            <article class="helper-card">
+                <h3>Ordnet uten tilbakelegging</h3>
+                <div class="field-grid">
+                    <div>
+                        <label for="onr-n">n</label>
+                        <input id="onr-n" type="number" min="1" value="8">
+                    </div>
+                    <div>
+                        <label for="onr-r">r</label>
+                        <input id="onr-r" type="number" min="0" value="3">
+                    </div>
+                </div>
+                <div class="button-row" style="margin-top: 12px;">
+                    <button class="btn btn-dark" id="onr-calc" type="button">Regn ut</button>
+                </div>
+                <div class="helper-output" id="onr-output"></div>
+            </article>
+
+            <article class="helper-card">
+                <h3>Uordnet uten tilbakelegging</h3>
+                <div class="field-grid">
+                    <div>
+                        <label for="unr-n">n</label>
+                        <input id="unr-n" type="number" min="1" value="8">
+                    </div>
+                    <div>
+                        <label for="unr-r">r</label>
+                        <input id="unr-r" type="number" min="0" value="3">
+                    </div>
+                </div>
+                <div class="button-row" style="margin-top: 12px;">
+                    <button class="btn btn-dark" id="unr-calc" type="button">Regn ut</button>
+                </div>
+                <div class="helper-output" id="unr-output"></div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="split">
+            <div class="example">
+                <strong>Hvorfor er <code>n!</code> nyttig?</strong>
+                <p class="muted">Fakultet er en kort måte å skrive et produkt der antall valg krymper: 5! = 5 · 4 · 3 · 2 · 1.</p>
+            </div>
+            <div class="example">
+                <strong>Vanlig feil</strong>
+                <p class="muted">Elever hopper ofte rett til en formel. Formelveiviseren over tvinger fram de to nøkkelspørsmålene først.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/formulas.js"></script>
+    </body>
+    </html>

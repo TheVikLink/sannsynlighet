@@ -1,0 +1,115 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordnet utvalg med tilbakelegging</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="../index.html" data-nav>Læringsstier</a>
+<a href="../formler.html" data-nav>Formler</a>
+<a href="../test.html" data-nav>Test</a>
+<a href="../programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container">
+    <section class="topic-hero">
+        <div class="topic-tag">🔁 Samme antall valg i hver plass</div>
+        <h1 class="page-title">Ordnet utvalg med tilbakelegging</h1>
+        <p>Her teller rekkefølgen, og du kan bruke samme symbol eller objekt flere ganger. Det gjør at hver plass har like mange valg. Derfor vokser formelen som et jevnt trappetrinn: n ganger n ganger n ... totalt r ganger.</p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="../test.html">Test dette temaet</a>
+            <a class="btn btn-light" href="../index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hva du skal lære</h2>
+        <div class="info-grid">
+            <div class="info-box"><h4>Typiske situasjoner</h4><p class="muted">Koder, passord, mønstre og valg på rad der samme tegn kan brukes flere ganger.</p></div><div class="info-box"><h4>Formel</h4><p class="muted">Du skal forstå hvorfor n^r passer når antall valg er likt i hver plass.</p></div><div class="info-box"><h4>Visualisering</h4><p class="muted">Du skal kunne se hver plass som en egen boks med like mange valg.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hvorfor virker det?</h2>
+
+    <div class="split">
+        <div class="example">
+            <div class="formula-badge">n<sup>r</sup></div>
+            <p class="muted">Hvis du har n valg i hver plass og r plasser, får du n · n · n ... r ganger.</p>
+            <div class="visual-row">
+                <span class="slot">4 valg</span>
+                <span class="slot">4 valg</span>
+                <span class="slot">4 valg</span>
+            </div>
+        </div>
+        <div class="example">
+            <strong>Hvorfor ingen minus 1?</strong>
+            <p class="muted">Fordi ingenting forsvinner. Etter hvert valg står alle mulighetene fremdeles klare på benken.</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="section">
+        <h2>Regnet eksempel steg for steg</h2>
+        <div class="step-list">
+            <div class="step"><strong>Oppgave</strong><div class="muted">Hvor mange koder på 3 tegn kan lages hvis hvert tegn kan være ett av 4 symboler og symbolene kan gjentas?</div></div><div class="step"><strong>Se på hver plass</strong><div class="muted">Første plass har 4 valg, andre plass har 4 valg og tredje plass har 4 valg.</div></div><div class="step"><strong>Bruk produktregelen</strong><div class="muted">4 · 4 · 4 = 64.</div></div><div class="step"><strong>Skriv med potens</strong><div class="muted">Det samme kan skrives som 4^3 = 64.</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Øv selv</h2>
+        <div class="practice-list">
+
+        <div class="practice-item">
+            <strong>1. Hvor mange mønstre kan lages med 2 perler på rad og 5 farger når farger kan gjentas?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">5 · 5 = 25 mønstre.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>2. Hvor mange firesifrede koder kan lages med sifrene 0 til 9 når sifre kan gjentas?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">10^4 = 10000.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>3. Hvorfor passer ikke ordnet uten tilbakelegging her?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Fordi symbolene kan brukes igjen. Antall valg blir ikke mindre underveis.</div>
+            </details>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="warning"><strong>Vanlig feil:</strong> Elever trekker ofte fra 1 mellom plassene selv om oppgaven sier at det er med tilbakelegging eller gjentakelse.</div>
+        <div class="success"><strong>Husk:</strong> Spør: Forsvinner noe etter at jeg har valgt det? Hvis nei, er antall valg likt i hver plass.</div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+<script src="../js/calculator.js"></script>
+    </body>
+    </html>

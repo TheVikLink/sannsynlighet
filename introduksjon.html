@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduksjon</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="../index.html" data-nav>Læringsstier</a>
+<a href="../formler.html" data-nav>Formler</a>
+<a href="../test.html" data-nav>Test</a>
+<a href="../programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container">
+    <section class="topic-hero">
+        <div class="topic-tag">🎡 Grunnmur</div>
+        <h1 class="page-title">Introduksjon</h1>
+        <p>Introduksjonen bygger ordforrådet: utfallsrom, gunstige utfall, sannsynlighet som brøk, desimaltall og prosent. Tanken er å få elevene til å se sannsynlighet som et forhold, ikke bare som et tall som ramler ned fra himmelen.</p>
+        <div class="button-row">
+            <a class="btn btn-dark" href="../test.html">Test dette temaet</a>
+            <a class="btn btn-light" href="../index.html">Til læringsstier</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hva du skal lære</h2>
+        <div class="info-grid">
+            <div class="info-box"><h4>Begreper</h4><p class="muted">Du skal vite hva et utfall, et utfallsrom og en hendelse er.</p></div><div class="info-box"><h4>Representasjoner</h4><p class="muted">Du skal kunne skrive sannsynlighet som brøk, desimaltall og prosent.</p></div><div class="info-box"><h4>Sammenligning</h4><p class="muted">Du skal kunne avgjøre hvilken hendelse som er mest sannsynlig.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Hvorfor virker det?</h2>
+
+    <div class="split">
+        <div class="example">
+            <div class="formula-badge">P = gunstige utfall / mulige utfall</div>
+            <p class="muted">Hele ideen er enkel: tell hvor mange utfall som passer, og del på hvor mange utfall som finnes totalt.</p>
+            <div class="visual-row">
+                <span class="ball blue"></span>
+                <span class="ball blue"></span>
+                <span class="ball red"></span>
+                <span class="arrow">→</span>
+                <span class="math">2 blå av 3 kuler</span>
+            </div>
+        </div>
+        <div class="example">
+            <strong>En liten språknøkkel</strong>
+            <p class="muted"><em>Mulige utfall</em> er alt som kan skje. <em>Gunstige utfall</em> er de utfallene som passer til spørsmålet.</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="section">
+        <h2>Regnet eksempel steg for steg</h2>
+        <div class="step-list">
+            <div class="step"><strong>Oppgave</strong><div class="muted">En pose har 3 røde, 2 blå og 1 grønn kule. Hva er sannsynligheten for blå?</div></div><div class="step"><strong>Tell gunstige utfall</strong><div class="muted">Blå kule er gunstig. Det finnes 2 blå kuler.</div></div><div class="step"><strong>Tell alle mulige utfall</strong><div class="muted">Totalt er det 3 + 2 + 1 = 6 kuler.</div></div><div class="step"><strong>Sett inn i formelen</strong><div class="muted">P(blå) = 2/6 = 1/3 = 0,333... = 33,3 %.</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Øv selv</h2>
+        <div class="practice-list">
+
+        <div class="practice-item">
+            <strong>1. Et lykkehjul har 8 like store felt. 3 felt er gule. Hva er sannsynligheten for gult?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">3 av 8 felt er gunstige. Sannsynligheten er 3/8.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>2. Skriv 1/4 som desimaltall og prosent.</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">1/4 = 0,25 = 25 %.</div>
+            </details>
+        </div>
+
+        <div class="practice-item">
+            <strong>3. Hva er mest sannsynlig: å få et partall på en terning eller å få tallet 6?</strong>
+            <details>
+                <summary>Vis forslag til løsning</summary>
+                <div class="muted" style="margin-top: 10px;">Partall har 3 gunstige utfall: 2, 4 og 6. Tallet 6 har bare 1 gunstig utfall. Partall er derfor mest sannsynlig.</div>
+            </details>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="warning"><strong>Vanlig feil:</strong> Elever teller ofte bare de gunstige utfallene og glemmer å dele på alle mulige utfall.</div>
+        <div class="success"><strong>Husk:</strong> Spør alltid: Hva teller jeg i telleren, og hva skal stå i nevneren?</div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+<script src="../js/calculator.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test i sannsynlighet</title>
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body class="">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html">Læringsstier</a>
+                <nav class="nav">
+                    <a href="index.html" data-nav>Læringsstier</a>
+<a href="formler.html" data-nav>Formler</a>
+<a href="test.html" data-nav>Test</a>
+<a href="programmering.html" data-nav>Programmering</a>
+                </nav>
+            </div>
+        </header>
+
+
+<main class="container" id="test-page">
+    <section class="topic-hero">
+        <div class="topic-tag">🧪 Testbygger</div>
+        <h1 class="page-title">Lag en test på 5, 10 eller 15 spørsmål</h1>
+        <p>
+            Velg temaer, velg antall spørsmål og bestem om eleven skal få fasit med én gang
+            eller først på slutten. Dette er laget for å være enkelt å justere og raskt å kjøre.
+        </p>
+    </section>
+
+    <section class="test-layout">
+        <div class="section" id="setup-panel">
+            <h2>1. Velg temaer</h2>
+            <div class="button-row" style="margin-bottom: 14px;">
+                <button class="btn btn-light" id="select-all-topics" type="button">Velg alle</button>
+            </div>
+            <div class="topic-checkboxes" id="topic-options"></div>
+
+            <h2 style="margin-top: 24px;">2. Antall spørsmål</h2>
+            <div class="button-row">
+                <button class="btn btn-dark" type="button" data-count="5">5 spørsmål</button>
+                <button class="btn btn-light" type="button" data-count="10">10 spørsmål</button>
+                <button class="btn btn-light" type="button" data-count="15">15 spørsmål</button>
+            </div>
+
+            <h2 style="margin-top: 24px;">3. Velg modus</h2>
+            <div class="button-row">
+                <button class="btn btn-dark" type="button" data-mode="practice">Øvingsmodus</button>
+                <button class="btn btn-light" type="button" data-mode="exam">Prøvemodus</button>
+            </div>
+            <p class="small" id="mode-note"></p>
+
+            <div class="success">
+                <strong>Tips:</strong> I korte økter fungerer 5 spørsmål godt. Vil du ha en mer "prøve-lignende" runde, velg 10 eller 15 spørsmål i prøvemodus.
+            </div>
+
+            <div class="button-row" style="margin-top: 22px;">
+                <button class="btn btn-accent" id="start-test" type="button">Start test</button>
+            </div>
+        </div>
+
+        <div class="section hide" id="runner-panel">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="small" id="progress-label">Oppgave 1 av 5</div>
+            <div id="question-area" style="margin-top: 10px;"></div>
+            <div id="feedback-area"></div>
+            <div class="button-row" id="question-controls"></div>
+        </div>
+
+        <div class="section hide" id="results-panel">
+            <div id="results-summary"></div>
+            <div id="results-list" style="margin-top: 12px;"></div>
+            <div class="button-row" style="margin-top: 20px;">
+                <button class="btn btn-dark" id="restart-test" type="button">Lag ny test</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Hva denne første testmotoren gjør</h2>
+            <ul class="note-list">
+                <li>Den blander flervalg og kortsvar.</li>
+                <li>Kortsvar kan skrives som brøk eller uttrykk, for eksempel <code>3/8</code> eller <code>8!/5!</code>.</li>
+                <li>Øvingsmodus gir fasit med én gang.</li>
+                <li>Prøvemodus viser samlet rapport til slutt.</li>
+                <li>Den flytende kalkulatoren nederst til høyre kan brukes underveis.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+
+        <footer class="footer">
+            <p>Bygget som en lettvekts prototype i ren HTML, CSS og JavaScript. Ingen innlogging, lite støy og kort vei til øving.</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/question-bank.js"></script>
+<script src="js/test-engine.js"></script>
+    </body>
+    </html>
